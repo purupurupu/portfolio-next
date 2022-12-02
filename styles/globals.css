@@ -15,6 +15,34 @@ a {
   box-sizing: border-box;
 }
 
+/* ナビゲーションメニュー全体のスタイル */
+nav {
+  background-color: #f8f8f8; /* 背景色 */
+  display: flex; /* フレックスボックスでレイアウト */
+  align-items: center; /* 中央揃え */
+  padding: 0 20px; /* 内側の余白 */
+}
+
+/* ナビゲーションメニューの項目のスタイル */
+nav a {
+  display: inline-block; /* インラインブロックで表示 */
+  padding: 10px 15px; /* 内側の余白 */
+  color: #333; /* 文字色 */
+  text-decoration: none; /* リンクの下線を消す */
+  font-weight: bold; /* 太字 */
+  transition: 0.2s; /* トランジション */
+}
+
+/* ナビゲーションメニューの項目をホバーしたときのスタイル */
+nav a:hover {
+  background-color: #eee; /* 背景色 */
+}
+
+/* ナビゲーションメニューの項目をアクティブにしたときのスタイル */
+nav a.active {
+  background-color: #ccc; /* 背景色 */
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
