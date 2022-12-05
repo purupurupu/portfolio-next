@@ -1,18 +1,20 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import { user } from "../utils/commonUtil";
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl: "/images/profile.png",
-};
+// const user = {
+//   name: "Tom Cook",
+//   email: "tom@example.com",
+//   imageUrl: "/images/profile.png",
+// };
+
 const navigation = [
   // { name: "Dashboard", href: "#", current: true },
   { name: "Top", href: "#", current: false },
-  { name: "Portfolio", href: "#", current: false },
-  { name: "Calendar", href: "#", current: false },
-  { name: "Reports", href: "#", current: false },
+  { name: "Activity", href: "#", current: false },
+  { name: "Blog", href: "#", current: false },
+  { name: "link", href: "#", current: false },
 ];
 const userNavigation = [
   { name: "Your Profile", href: "#" },
@@ -210,20 +212,6 @@ export default function Navbar() {
             </h1>
           </div>
         </header> */}
-        <main>
-          <div className="md:flex">
-            <div className="flex-1 mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-              {/* Replace with your content */}
-              <div className="px-4 py-6 sm:px-0">
-                <p className="text-4xl">Shintaro Yamamoto</p>
-                <p>Engineer/Developer</p>
-              </div>
-            </div>
-            <div className="flex-1 mx-auto">
-              <img className="rounded-full" src={user.imageUrl} alt="" />
-            </div>
-          </div>
-        </main>
       </div>
     </>
   );
