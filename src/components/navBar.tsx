@@ -1,7 +1,8 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { user } from "../utils/commonUtil";
+import Link from "next/link";
 
 // const user = {
 //   name: "Tom Cook",
@@ -11,9 +12,9 @@ import { user } from "../utils/commonUtil";
 
 const navigation = [
   // { name: "Dashboard", href: "#", current: true },
-  { name: "Top", href: "#", current: false },
-  { name: "Activity", href: "#", current: false },
-  { name: "Blog", href: "#", current: false },
+  { name: "Top", href: "/", current: false },
+  { name: "Portfolio", href: "/portfolios", current: false },
+  { name: "Blog", href: "/blogs", current: false },
   { name: "link", href: "#", current: false },
 ];
 const userNavigation = [
@@ -54,19 +55,21 @@ export default function Navbar() {
                     <div className="hidden md:block">
                       <div className="ml-0 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
-                            key={item.name}
-                            href={item.href}
-                            className={classNames(
-                              item.current
-                                ? "bg-gray-900 text-white"
-                                : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                              "px-3 py-2 rounded-md text-sm font-medium"
-                            )}
-                            aria-current={item.current ? "page" : undefined}
-                          >
-                            {item.name}
-                          </a>
+                          <Link href={item.href}>
+                            <a
+                              key={item.name}
+                              // href={item.href}
+                              className={classNames(
+                                item.current
+                                  ? "bg-gray-900 text-white "
+                                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                                "px-3 py-2 rounded-md text-sm font-medium "
+                              )}
+                              aria-current={item.current ? "page" : undefined}
+                            >
+                              {item.name}
+                            </a>
+                          </Link>
                         ))}
                       </div>
                     </div>

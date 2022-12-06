@@ -18,17 +18,18 @@ export default function TopContents() {
       <div className="mt-12">
         <p className="font-bold italic underline">Tech Stack</p>
         <div className="ml-4">
-          <p>C, C++, python, PHP, Laravel,MySQL.</p>
           <p>
-            AWS Stack is [
-            EC2、S3、Lambda、CloudFront、ElastiCache、WAF、SES、SNS、RDS].
+            C,C++,python,PHP,Laravel,MySQL. <br />
+            AWS Stack is [ EC2, S3, Lambda, CloudFront, ElastiCache, WAF, SES,
+            SNS, RDS ].
           </p>
         </div>
       </div>
       <div className="mt-12">
-        <p className="font-bold italic underline ">Hobby</p>
+        <p className="font-bold italic underline ">Activity</p>
         <div className="ml-4">
           <p>Writing Blog.</p>
+          <p>Learning English.</p>
           <p>Learning Algorithms.</p>
         </div>
       </div>
