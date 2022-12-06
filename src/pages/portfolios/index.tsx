@@ -1,14 +1,15 @@
 import Head from "next/head";
 import Image from "next/image";
-import NavBar from "../components/navBar";
-import NameAndImage from "../components/nameAndImage";
-import TopContents from "../components/topContents";
-import Footer from "../components/footer";
-import styles from "../styles/Home.module.css";
-import { user } from "../utils/commonUtil";
+import NavBar from "@/components/navBar";
+// import NameAndImage from "../components/nameAndImage";
+// import TopContents from "../components/topContents";
+import PortfolioContents from "./portfolioContents";
+import Footer from "@/components/footer";
+import styles from "@/styles/Home.module.css";
+// import { user } from "../utils/commonUtil";
 import SnsIntroduction from "@/components/snsIntroduction";
 
-export default function Home() {
+export default function Portfolio() {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,8 +19,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <main>
-        <NameAndImage user={user} />
-        <TopContents />
+        <PortfolioContents />
         <SnsIntroduction />
       </main>
       <Footer />
