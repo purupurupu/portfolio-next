@@ -55,7 +55,7 @@ export default function Navbar() {
                     <div className="hidden md:block">
                       <div className="ml-0 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <Link href={item.href}>
+                          <Link legacyBehavior href={item.href}>
                             <a
                               key={item.name}
                               // href={item.href}
@@ -63,7 +63,7 @@ export default function Navbar() {
                                 item.current
                                   ? "bg-gray-900 text-white "
                                   : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                "px-3 py-2 rounded-md text-sm font-medium "
+                                "px-3 py-2 rounded-md text-sm font-medium transition duration-500 ease-in-out transform -translate-y-1 hover:translate-y-0"
                               )}
                               aria-current={item.current ? "page" : undefined}
                             >
