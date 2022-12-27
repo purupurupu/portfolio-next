@@ -9,8 +9,8 @@ export default function SnsIntroduction() {
         rel="noopener noreferrer"
       >
         <img
-          className="bg-white w-12 h-12 rounded-full"
-          src="/icons/github-mark.svg"
+          className="bg-black w-12 h-12 rounded-full"
+          src="/icons/github-mark-white.svg"
           alt=""
         />
       </a>

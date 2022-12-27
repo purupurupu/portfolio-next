@@ -55,10 +55,9 @@ export default function Navbar() {
                     <div className="hidden md:block">
                       <div className="ml-0 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <Link href={item.href}>
-                            <a
-                              key={item.name}
-                              // href={item.href}
+                          <Link key={item.name} href={item.href}>
+                            <div
+                              // key={item.name}
                               className={classNames(
                                 item.current
                                   ? "bg-gray-900 text-white "
@@ -68,7 +67,7 @@ export default function Navbar() {
                               aria-current={item.current ? "page" : undefined}
                             >
                               {item.name}
-                            </a>
+                            </div>
                           </Link>
                         ))}
                       </div>
@@ -207,14 +206,6 @@ export default function Navbar() {
             </>
           )}
         </Disclosure>
-
-        {/* <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-              Dashboard
-            </h1>
-          </div>
-        </header> */}
       </div>
     </>
   );
